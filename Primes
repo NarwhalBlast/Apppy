@@ -1,0 +1,18 @@
+primes = []
+
+def newPrime(maxInt):
+  currentInt = 2
+  while currentInt < maxInt:
+    if isPrime(currentInt) == True:
+      primes.append(currentInt)
+    currentInt += 1
+    
+def isPrime(currentInt):
+  for prime in primes:
+    if currentInt % prime == 0:
+        return False
+  else:
+    return True
+      
+newPrime(int(input("Primes up to: ")))
+print(primes)
